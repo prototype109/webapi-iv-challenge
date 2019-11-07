@@ -1,4 +1,5 @@
 // code away!
+require("dotenv").config();
 const express = require("express");
 
 const userRouter = require("./users/userRouter");
@@ -11,8 +12,10 @@ server.use(logger);
 server.use("/api/users", userRouter);
 server.use("/api/posts", postRouter);
 
-server.listen(4000, () => {
-  console.log("server listening on http://localhost:4000/");
+const port = process.env.PORT;
+
+server.listen(port, () => {
+  console.log(`server listening on http://localhost:${port}/`);
 });
 
 function logger(req, res, next) {
