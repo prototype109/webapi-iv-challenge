@@ -15,7 +15,7 @@ server.use("/api/posts", postRouter);
 const port = process.env.PORT;
 
 server.get("/", (req, res) => {
-  req.status(200).send("You are at the index page");
+  res.status(200).send("You are at the index page");
 });
 
 server.listen(port, () => {
