@@ -18,9 +18,9 @@ server.listen(port, () => {
   console.log(`server listening on http://localhost:${port}/`);
 });
 
-server.get("/", (req, res) => {
-  req.status(200).send("You are at the index page");
-});
+// server.get("/", (req, res) => {
+//   req.status(200).send("You are at the index page");
+// });
 
 function logger(req, res, next) {
   const date = new Date();
